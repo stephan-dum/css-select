@@ -5,7 +5,7 @@ This are pure CSS and HTML implementation concepts of a select form control elem
 ## Caveats
 - Additional markup
 - Forced to `checked` a default value
-- fixed min-height min-width
+- fixed `min-height` `min-width`
 
 There are three levels of browser support:
 
