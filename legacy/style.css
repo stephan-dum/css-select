@@ -10,8 +10,6 @@
     width: 100%;
     opacity: 0;
     z-index: 2; }
-    .dropdown > .opener:indeterminate + .placeholder {
-      display: block; }
     .dropdown > .opener:checked {
       display: none; }
       .dropdown > .opener:checked ~ .options .label {
@@ -34,14 +32,8 @@
       border-right: 5px solid transparent;
       border-top: 5px solid black;
       pointer-events: none; }
-  .dropdown > .placeholder {
-    position: absolute;
-    z-index: 1;
-    top: 1px;
-    left: 1px; }
   .dropdown .label:hover {
     background-color: #efefef; }
-  .dropdown > .placeholder,
   .dropdown .label {
     display: none;
     padding: 0.5em;

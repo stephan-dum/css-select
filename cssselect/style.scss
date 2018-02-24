@@ -1,0 +1,96 @@
+.dropdown {
+	display:inline-block;
+	position:relative;
+	min-height:2em;
+	min-width:150px;
+	
+	> .opener {
+		position:absolute;
+		top:1px;
+		width:100%;
+		height:100%;
+		z-index:1;
+		background:transparent;
+		opacity:0;
+		border:0;
+		padding:0;
+		cursor:pointer;
+		
+		&:focus {
+			z-index:0;
+		}
+		
+		&:focus + .list input:checked + .label {
+			background-color:#d8d8d8;
+		}
+		
+		&:not(:focus) + .list:not(:active) input:not(:checked) + .label {
+			display:none;
+		}
+	}
+	
+	> .list {
+		list-style:none;
+		margin:0;
+		border:1px solid gray;
+		padding:0;
+		position:absolute;
+		top:0;
+		outline:none;
+		width:100%;
+		box-sizing:border-box;
+		line-height:1em;
+		
+		input {
+			display:none;
+		}
+		
+		&:active {
+			z-index:1;
+		}
+		
+		.label {
+			padding:0.5em;
+			
+			&:hover {
+				background-color:#efefef;
+				cursor:pointer;
+			}
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0.5em;
+			top: 0.325em;
+			transition: all 0.5s;
+			border: 0.375em solid transparent;
+			cursor: pointer;
+			z-index: 1;
+			pointer-events: none;
+			border-bottom-color: black;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform:rotate(-45deg);
+		}
+	}
+	
+	> .opener:focus ~ .list {
+		&:before,
+		&:after {
+			border-right-width: 0em;
+			border-left: 0.15em solid black;
+			border-bottom-width: 0.825em;
+			top: 0.5em;
+			right: 0.75em;
+			pointer-events: initial;
+			border-top-width: 0em;
+		}
+	}	
+	
+		
+}

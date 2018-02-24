@@ -12,11 +12,6 @@
 		opacity:0;
 		z-index:2;
 		
-		
-		&:indeterminate + .placeholder {
-			display:block;
-		}
-		
 		&:checked {
 			display:none;
 			
@@ -50,21 +45,11 @@
 			pointer-events:none;
 		}
 	}
-	
-	 > .placeholder {
-		position:absolute;
-		z-index:1;
-		top:1px;
-		left:1px;
-	}
-	
 
 	.label:hover {
 		background-color:#efefef;
 	}
 	
-	
-	> .placeholder,
 	.label {
 		display:none;
 		padding:0.5em;
